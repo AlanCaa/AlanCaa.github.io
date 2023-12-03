@@ -1,0 +1,167 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  margin: 5;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#backgroundvideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#result {
+  font-size: 1.5em;
+  color: red;
+  text-align: center;
+  margin: 0px 0;
+  font-weight: bold;
+}
+
+
+
+#videoLeft,
+#videoRight{
+  width: 28%; /* Ajusta según sea necesario */
+  max-width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  margin: 5px;
+}
+
+#vid,
+#vids{
+  width: 28%;
+  max-width: 100%;
+  height: auto;
+  opacity: 0;
+}
+.espacio{
+  display: flex;
+  justify-content: space-between;
+  width: device-width;
+  
+}
+
+
+.video-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%; /* Ajusta según sea necesario para ocupar toda la altura del contenedor padre */
+  margin: 2px 0;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%; /* Ajusta según sea necesario para ocupar toda la altura del contenedor padre */
+
+}
+
+#thirdVideo{
+  width: 100%; /* Ajusta según sea necesario */
+  max-width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+#sies,
+#noes {
+  margin: 0px;
+  max-width: 100%;
+  height: auto;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+#thirdVideoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: device-width; /* Ajusta según sea necesario */
+  margin-top: 10px; /* Ajusta según sea necesario */
+}
+
+@media only screen and (max-width: 200px) {
+  body {
+    align-items: center;
+  }
+
+  #result {
+    font-size: 1.5em;
+  }
+
+  .video-container {
+    flex-direction: column;
+  }
+
+  #videoLeft,
+  #videoRight,
+  #thirdVideo {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #sies,
+  #noes {
+    max-width: 100%;
+  }
+
+  #thirdVideoContainer {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 100px) {
+  body {
+    align-items: center;
+  }
+  .video-container,
+  #thirdVideoContainer {
+    flex-direction: column;
+  }
+
+  #videoLeft,
+  #videoRight,
+  #thirdVideo {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+/* Añadir estilos para la transición suave */
+#sies.fade-out,
+#noes.fade-in,
+#thirdVideo.fade-in {
+  opacity: 0;
+}
+
+/* Ajustar la alineación de la imagen cuando no hay videos */
+.no-videos #videoLeft,
+.no-videos #videoRight,
+.no-videos #thirdVideoContainer {
+  opacity: 0;
+}
+.no-videos .image-container {
+  align-items: center;
+}

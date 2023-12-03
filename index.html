@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Verificar si es diciembre</title>
+  <style>
+    /* Tu estilo existente */
+
+    #images-and-videos-frame {
+      width: 100%;
+    }
+
+    @media screen and (min-width: 768px) {
+      #images-and-videos-frame {
+        width: 75%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <video id="backgroundvideo" autoplay muted loop>
+    <source src="recursos/back.mp4" type="video/mp4">
+    Tu navegador no soporta el tag de video.
+  </video>
+  <div id="result-frame">
+    <div id="result"></div>
+  </div>
+  <div id="images-and-videos-frame">
+    <div class="video-container">
+      <video id="videoLeft" width="device-width" height="device-height" loop>
+        <source src="recursos/gato1.mp4" type="video/mp4">
+        Tu navegador no soporta el tag de video.
+      </video>
+      <div class="image-container">
+        <img id="sies" src="recursos/sies.jpg" alt="si">
+        <img id="noes" src="recursos/noes.jpg" alt="no">
+        <div>
+          <div class="espacio">
+            <video id="vid" width="device-width" height="device-height" loop>
+              <source src="recursos/gat.mp4" type="video/mp4">
+              Tu navegador no soporta el tag de video.
+            </video>
+            <div id="thirdVideoContainer">
+              <video id="thirdVideo" width="device-width" height="device-height" muted loop>
+                <source src="recursos/gato3.mp4" type="video/mp4">
+                Tu navegador no soporta el tag de video.
+              </video>
+            </div>
+            <video id="vids" width="device-width" height="device-height" loop>
+              <source src="recursos/gat.mp4" type="video/mp4">
+              Tu navegador no soporta el tag de video.
+            </video>
+          </div>
+        </div>
+      </div>
+      <video id="videoRight" width="device-width" height="device-height" loop>
+        <source src="recursos/gato2.mp4" type="video/mp4">
+        Tu navegador no soporta el tag de video.
+      </video>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
